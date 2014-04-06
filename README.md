@@ -6,7 +6,7 @@ A ClojureScript library for working with JavaScript promises.
 
 This library leverages the power of core.async to let you write promise code like this:
 
-```ClojureScript
+```clojure
 (cljs-promises.async/extend-promises-as-pair-channels!)
 
 (go
@@ -43,7 +43,7 @@ Promises excel at representing single values because they are an **immutable** r
 
 Channels in core.async are very different: they are inherently mutable. When you take a value from a channel, it is gone from that channel and no one else will see it. Here's how you might do a JSONP request in core.async:
 
-```ClojureScript
+```clojure
 ;; jsonp function lifted from http://swannodette.github.io/2013/11/07/clojurescript-101/
 (defn jsonp [uri]
   (let [out (chan)
@@ -61,7 +61,7 @@ If you want to be able to _share_ representations of delayed or partially-delaye
 
 Here's some code which builds a map of promises for different kinds of data about a GitHub user:
 
-```ClojureScript
+```clojure
 (defn build-view-context
   [username]
   {:user (github-get (str "/users/" username))
@@ -89,10 +89,10 @@ Then you can eval individual forms from Light Table and save-and-refresh wheneve
 
 ## Thanks
 
-Special thanks to [David Nolen](http://swannodette.github.io/) for writing so much fantastic code and introductory material for newcomers to ClojureScript and especially core.async. There's a bunch of code in this library and in the examples which has been adapted or copied from code on his blog. I've tried to make attribution notes in the code comments wherever appropriate.
+Special thanks to [David Nolen](http://swannodette.github.io/) for writing so much fantastic code and introductory material for newcomers to ClojureScript and especially core.async. I've adapted or copied some code from his blog in this library (especially the examples), and I've tried to make attribution notes in the code comments wherever appropriate.
 
 ## License
 
 This code is released under an MIT license.
 
-Copyright James MacAulay 2014.
+Copyright 2014 James MacAulay.
