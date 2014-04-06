@@ -35,7 +35,7 @@ If you don't want to globally extend promises like this at all (a good idea if y
 
 ## Rationale
 
-We have [CSP](http://en.wikipedia.org/wiki/Communicating_sequential_processes) with core.async, so [why bother with promises](http://swannodette.github.io/2013/08/23/make-no-promises/)? Promises provide [very different concurrency semantics](http://promises-aplus.github.io/promises-spec/) compared with CSP channels. While channels provide a powerful abstraction for _passing messages and synchronizing execution_, a promise simply represents a single "eventual value".
+We have [CSP](http://en.wikipedia.org/wiki/Communicating_sequential_processes) with core.async, so [why bother with promises](http://swannodette.github.io/2013/08/23/make-no-promises/)? Promises provide very different concurrency semantics compared with CSP channels. While channels provide a powerful abstraction for _passing messages and synchronizing execution_, a promise simply represents a single "eventual value".
 
 This means that HTTP and most filesytem operations are very well suited for promises. Meanwhile, promises are _not_ appropriate for coordinating streams of spontaneous events like key presses or data coming in on a WebSocket. Channels are still the bees' knees when it comes to that kind of thing.
 
