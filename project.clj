@@ -1,4 +1,4 @@
-(defproject cljs-promises "0.1.0-SNAPSHOT"
+(defproject jamesmacaulay/cljs-promises "0.1.0-SNAPSHOT"
   :description "A ClojureScript library for working with JavaScript promises"
 
   :url "https://github.com/jamesmacaulay/cljs-promises"
