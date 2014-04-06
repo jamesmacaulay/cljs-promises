@@ -8,7 +8,7 @@ Some functions in this library require that you've already got an ES6 Promise im
 
 ## Overview
 
-This library leverages the power of core.async to let you write promise code like this:
+This library leverages the power of [core.async](https://github.com/clojure/core.async) to let you write promise code like this:
 
 ```clojure
 (cljs-promises.async/extend-promises-as-pair-channels!)
