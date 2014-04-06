@@ -45,6 +45,8 @@ Promises excel at representing single values because they are an **immutable** r
 * a promise only ever resolves to a single fulfilled value or rejected error
 * once resolved, a promise will continue to provide its value or error to anyone who asks for it
 
+(Sounds a lot like [futures](http://clojuredocs.org/clojure_core/clojure.core/future) in Clojure, doesn't it?)
+
 Channels in core.async are very different: they are inherently mutable. When you take a value from a channel, it is gone from that channel and no one else will see it. Here's how you might do a JSONP request in core.async:
 
 ```clojure
