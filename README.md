@@ -2,6 +2,10 @@
 
 A ClojureScript library for working with JavaScript promises.
 
+## Requirements
+
+Some functions in this library require that you've already got an ES6 Promise implementation present, either natively or through a [polyfill](https://github.com/jakearchibald/es6-promise). Other functions only require that you're giving them [Promises/A+](http://promises-aplus.github.io/promises-spec/)-compliant objects.
+
 ## Overview
 
 This library leverages the power of core.async to let you write promise code like this:
