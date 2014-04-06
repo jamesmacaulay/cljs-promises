@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script type='text/javascript' id='lt_ws' src='http://localhost:54470/socket.io/lighttable/ws.js'></script>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+    <body>
+
+        <div class="example">
+            <h2>replicated_search.cljs</h2>
+            <button id="replicated-search">Fake Replicated Search</button>
+            <div id="replicated-output"></div>
+        </div>
+
+        <div class="example">
+            <h2>github_search.cljs</h2>
+            <label for="github-username">GitHub Username</label>
+            <input id="github-username" name="github-username">
+            <button id="github-search">Search</button>
+            <div id="github-container">
+                <h3 id="github-username-header"></h3>
+                <div id="github-avatar"></div>
+                <div id="github-summary"></div>
+                <div id="github-latest"></div>
+            </div>
+        </div>
+
+        <script src="http://s3.amazonaws.com/es6-promises/promise-0.1.1.js" type="text/javascript"></script>
+        <script src="out/goog/base.js" type="text/javascript"></script>
+        <script src="js/examples.js" type="text/javascript"></script>
+        <script type="text/javascript">goog.require("examples");</script>
+    </body>
+</html>

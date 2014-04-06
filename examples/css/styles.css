@@ -1,0 +1,14 @@
+body {
+  font-family: Helvetica;
+}
+
+.example {
+  margin: 10px;
+  padding: 10px;
+  width: 500px;
+  background: #eee;
+}
+
+.avatar {
+  width: 30px;
+}
