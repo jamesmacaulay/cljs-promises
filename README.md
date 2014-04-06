@@ -2,11 +2,7 @@
 
 A ClojureScript library for working with JavaScript promises.
 
-## Requirements
-
-Some functions in this library require that you've already got an ES6 Promise implementation present, either natively or through a [polyfill](https://github.com/jakearchibald/es6-promise). Other functions only require that you're giving them [Promises/A+](http://promises-aplus.github.io/promises-spec/)-compliant objects.
-
-## Overview
+### Overview
 
 This library leverages the power of [core.async](https://github.com/clojure/core.async) to let you write promise code like this:
 
@@ -33,7 +29,11 @@ If you don't want to globally extend promises like this at all (a good idea if y
 * `cljs-promises.async/value-port` gives you a `ReadPort` of only resolved values, or `nil` values if a promise is rejected.
 * `cljs-promises.async/error-port` is the reverse of `value-port` and gives you just the errors.
 
-## Rationale
+### Requirements
+
+Some functions in this library require that you've already got an ES6 Promise implementation present, either natively or through a [polyfill](https://github.com/jakearchibald/es6-promise). Other functions only require that you're giving them [Promises/A+](http://promises-aplus.github.io/promises-spec/)-compliant promise objects.
+
+### Rationale
 
 We have [CSP](http://en.wikipedia.org/wiki/Communicating_sequential_processes) with core.async, so [why bother with promises](http://swannodette.github.io/2013/08/23/make-no-promises/)? Promises provide very different concurrency semantics compared with CSP channels. While channels provide a powerful abstraction for _passing messages and synchronizing execution_, a promise simply represents a single "eventual value".
 
@@ -82,7 +82,7 @@ I'm sure there are various possibilities available with core.async channels to d
 
 One of the great things about core.async, though, is that its channels are based on a simple interface composed of a handful of very granular ClojureScript protocols! This means that it's actually really easy to make custom types which act like channels _just enough_ to play nice with the rest of core.async.
 
-## Development
+### Development
 
 I've been developing cljs-promises with [Light Table](http://www.lighttable.com/), mostly by playing with the examples:
 
@@ -93,11 +93,11 @@ I've been developing cljs-promises with [Light Table](http://www.lighttable.com/
 
 Then you can eval individual forms from Light Table and save-and-refresh whenever you make big changes.
 
-## Thanks
+### Thanks
 
 Special thanks to [David Nolen](http://swannodette.github.io/) for writing so much fantastic code and introductory material for newcomers to ClojureScript and especially core.async. I've adapted or copied some code from his blog in this library (especially the examples), and I've tried to make attribution notes in the code comments wherever appropriate.
 
-## License
+### License
 
 This code is released under an MIT license.
 
