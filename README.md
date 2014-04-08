@@ -17,7 +17,7 @@ This library leverages the power of [core.async](https://github.com/clojure/core
        (println (str "Could't get user data: " (ex-message e))))))
 ```
 
-The first line globally extends `Promise` instances to act like **read-only channels** which, once resolved, **endlessly produce the same value or error to anyone who takes from them**. Because promises have built-in error semantics which don't have any direct corollary in core.async, there are different ways that we can represent promise results. In this example we use a function which makes it so that values taken from promises are actually `[value error]` pairs, where you get `[value nil]` from a fulfilled promise and `[nil error]` from a rejected promise.
+The first line globally extends `Promise` instances to act like **read-only channels** which, once resolved, **endlessly produce the same value or error to anyone who takes from them**. Because promises have built-in error semantics which don't have any direct corollary in core.async, there are different ways that we can represent promise results. In this example we've extended promises in a way that values taken from them with core.async are actually `[value error]` pairs, where you get `[value nil]` from a fulfilled promise and `[nil error]` from a rejected promise.
 
 `<?` is a macro provided by `cljs-promises.async` which takes one of these pairs from a promise with core.async's `<!`. If the `error` slot of the pair is non-nil, it throws the error. Otherwise it returns whatever is in the `value` slot.
 
