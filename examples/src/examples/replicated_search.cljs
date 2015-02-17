@@ -15,8 +15,8 @@
 (defn fake-search [kind]
   (fn [query]
     (p/promise (fn [resolve _]
-                        (js/setTimeout #(resolve [kind query])
-                                       (rand-int 100))))))
+                 (js/setTimeout #(resolve [kind query])
+                                (rand-int 100))))))
 
 (def web1 (fake-search :web1))
 (def web2 (fake-search :web2))
